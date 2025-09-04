@@ -1,0 +1,56 @@
+from tkinter import *
+def addition():
+      a=t1.get()
+      b=t2.get()
+      a=int(a)
+      b=int(b)
+      c=a+b
+      t3.delete(0,END)
+      t3.insert(0,c)
+def sub():
+      a=t1.get()
+      b=t2.get()
+      a=int(a)
+      b=int(b)
+      c=a-b
+      t3.delete(0,END)
+      t3.insert(0,c)
+def multi():
+      n=t1.get()
+      n1=t2.get()
+      a=int(n)
+      b=int(n1)
+      c=a*b
+      t3.delete(0,END)
+      t3.insert(0,c)
+def divi():
+      a=t1.get()
+      b=t2.get()
+      a=int(a)
+      b=int(b)
+      c=a/b
+      t3.delete(0,END)
+      t3.insert(0,c)
+window=Tk()
+window.geometry("500x500")
+l1=Label(window,text="Enter Number1")
+l2=Label(window,text="Enter Number2")
+l3=Label(window,text="Addition")
+t1=Entry(window)
+t2=Entry(window)
+t3=Entry(window)
+b1=Button(window,text="Add",command=addition)
+b2=Button(window,text="subtraction",command=sub)
+b3=Button(window,text="Multiplication",command=multi)
+b4=Button(window,text="Division",command=divi)
+
+l1.grid(row=0,column=0)
+l2.grid(row=1,column=0)
+l3.grid(row=2,column=0)
+t1.grid(row=0,column=1)
+t2.grid(row=1,column=1)
+t3.grid(row=2,column=1)
+b1.grid(row=3,column=0)
+b2.grid(row=3,column=1)
+b3.grid(row=4,column=0)
+b4.grid(row=4,column=1)
