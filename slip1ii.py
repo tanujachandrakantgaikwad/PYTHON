@@ -1,0 +1,22 @@
+from tkinter import *
+def age():
+    yy=int(t3.get())
+    a=2025-yy
+    t4.insert(0,a)
+window=Tk()
+window.geometry("500x500")
+l1=Label(window,text=" day")
+l2=Label(window,text=" month")
+l3=Label(window,text="enter year")
+l4=Label(window,text="enter age")
+t1=Entry(window)
+t2=Entry(window)
+t3=Entry(window)
+t4=Entry(window)
+b1=Button(window,text="age",command=age)
+l1.pack(),t1.pack()
+l2.pack(),t2.pack()
+l3.pack(),t3.pack()
+l4.pack(),t4.pack()
+b1.pack()
+window.mainloop()
